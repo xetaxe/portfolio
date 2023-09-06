@@ -11,101 +11,160 @@
 		<meta name="author" content="Nil Garcés">
 		<meta name="description" content="This is my personal web development portfolio, where I show some of the software projects I have worked on">
 
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="main.css">
+		<script type="module" src="main.js" defer></script>
 
 	</head>
 
 	<body>
-
-		<div class="header">
-			<h1 id="page-logo">Hi</h1>
-			<div id="navigation-buttons">
-				<ul id="navigation-buttons-list">
-					<li>About</li>
-					<li>Projects</li>
-					<li>Contact</li>
-					<li id="resume"> Resume</li>
+		<header>
+			<div class="logo">
+				<a href="./" class="logo_link">
+					<img src="favicon.png">
+					nilgarces.dev
+				</a>
+			</div>
+			<nav class="desktop_nav">
+				<ul>
+					<li>
+						<a href="#about">
+							<span class="first_letter">A</span>bout
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio">
+							<span class="first_letter">P</span>ortfolio
+						</a>
+					</li>					
+					<li>
+						<a href="#contact">
+							<span class="first_letter">C</span>ontact
+						</a>
+					</li>
 				</ul>
+			</nav>
+			<div id="menu_button" class="menu_button">
+				<span id="line_1" class="line"></span>
+				<span id="line_2" class="line"></span>
+				<span id="line_3" class="line"></span>
 			</div>
-		</div>
+		</header>
 
-		<div class="col12 section-title">
-			<h1>About</h1>
-		</div>
+		<nav id="mobile_nav" class="mobile_nav hide">
+			<ul>
+				<li class="mobile_nav_link">
+					<a href="#about">
+						<span class="first_letter">A</span>bout
+					</a>
+				</li>
+				<li class="mobile_nav_link">
+					<a href="#portfolio">
+						<span class="first_letter">P</span>ortfolio
+					</a>
+				</li>
+				<li class="mobile_nav_link">
+					<a href="#contact">
+						<span class="first_letter">C</span>ontact
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-		<div class="row">
-
-			<div class="col7 colt6">
-				<p>Hi, my name is Nil! <br>
-				After doing some web development projects in my spare time, 
-				usually with other friends in hackathons or as side projects,
-				 I decided it was time to take matters a bit more seriously! <br>
-				This is why I am currently learning as much as I can (so many tools
-				 out there...), but always trying to have some fun :) <br>
-				Explore below some of the things I have worked on, or I am 
-				developing at the moment!
-				</p>
-			</div>
-		</div>
-
-		<div class="col12 section-title">
-			<h1>Projects</h1>
-		</div>
-
-		<div class="row">
-			<div class="col4 colt6 project">
-				<img src="img/proj1.jpeg">
-				<div class="project-title">
-					Google Image 1
+		<main>
+			<section class="hero">
+				<div class="hero_text">
+					<div>
+						<div class="hi">Hi, I am</div>
+						<div class="name">Nil Garcés</div>
+					</div>
+					<span class="i_am">A full stack developer from Barcelona.</span>
+					<span class="cv">CV</span>
 				</div>
-			</div>
-			<div class="col4 colt6 project">
-				<img src="img/proj2.jpeg">
-				<div class="project-title">
-					Google Image 2
+				<div>
+					<div class="hero_img_container">
+						<img src="img/me_edit.jpg" class="hero_img">
+					</div>
 				</div>
-			</div>
-			<div class="col4 colt6 project">
-				<img src="img/proj3.jpg">
-				<div class="project-title">
-					Google Image 3
+			</section>
+
+			<section id="about" class="">
+				<h1>About</h1>
+
+				<div class="">
+					<p>
+						I fell in love with programming during my Mathematics degree, more than eight years ago, where I as lucky enough to meet other hacky friends. That was the moment where I realized the power of HTML, CSS & JS, which I recurrently put into practice on several hackathons or side projects.
+					</p>
+					<p>
+						After finishing my studies in advanced mathematics and a brief detour into the domains of data science, I decided to return to and delve deeper into web development. Ever since, my main focus as a software consultant and full stack developer has been building cool stuff and enjoying the crazy ride in this ever-evolving field.
+					</p>
+					<p>
+						When I'm not at the computer, I'm usually playing the guitar, reading, hanging out with friends or learning useless information on Youtube/Wikipedia.
+					</p>
 				</div>
-			</div>			
-		</div>
+			</section>
 
-		<div class="col12 section-title">
-			<h1>Contact</h1>
-		</div>
+			<section id="portfolio" class="">
+				<h1>Portfolio</h1>
 
-		<div class="container col12">
-			<form onsubmit="false">
+				<div class="">
+					<div class="temp_img">
+						<img src="img/proj1.jpeg">
+						<div class="project-title">
+							Google Image 1
+						</div>
+					</div>
+					<div class="temp_img">
+						<img src="img/proj2.jpeg">
+						<div class="project-title">
+							Google Image 2
+						</div>
+					</div>
+					<div class="temp_img">
+						<img src="img/proj3.jpg">
+						<div class="project-title">
+							Google Image 3
+						</div>
+					</div>			
+				</div>
+			</section>
+
+			<section id="contact" class="">
+				<h1>Contact</h1>
+
+				<div class="container">
+					<form onsubmit="false">
+						
+						<div class="col6 section-title">
+							<label for="contact-name">Name</label>
+							<input type="text" id="contact-name" placeholder="Your name...">
+						</div>
+
+						<div class="col6 section-title">
+							<label for="contact-email">Contact email</label>
+							<input type="text" id="contact-email">
+					</div>
+
+						<div class="col12 section-title">
+							<label for="contact-subject">Subject</label>
+							<input type="text" id="contact-subject"></textarea>
+						</div>
+
+						<div class="col12 section-title">
+							<label for="contact-message">Subject</label>
+							<textarea id="contact-message" placeholder="Write something.."></textarea>
+						</div>
+
+					<input type="submit" value="Submit">
 				
-				<div class="col6 section-title">
-					<label for="contact-name">Name</label>
-			  		<input type="text" id="contact-name" placeholder="Your name...">
+					</form>
 				</div>
+			</section>
 
-				<div class="col6 section-title">
-					<label for="contact-email">Contact email</label>
-					<input type="text" id="contact-email">
-			  </div>
+		</main>
 
-			  	<div class="col12 section-title">
-			  		<label for="contact-subject">Subject</label>
-			  		<input type="text" id="contact-subject"></textarea>
-				</div>
-
-				<div class="col12 section-title">
-			  		<label for="contact-message">Subject</label>
-			  		<textarea id="contact-message" placeholder="Write something.."></textarea>
-				</div>
-
-			  <input type="submit" value="Submit">
-		  
-			</form>
-		  </div>
-
-
+		<footer>
+			<span>© Nil Garcés 2023</span>
+		</footer>
 
 	</body>
 
