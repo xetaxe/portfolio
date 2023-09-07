@@ -17,7 +17,7 @@
 	</head>
 
 	<body>
-		<header>
+		<header id="header">
 			<div class="logo">
 				<a href="./" class="logo_link">
 					<img src="favicon.png">
@@ -26,20 +26,23 @@
 			</div>
 			<nav class="desktop_nav">
 				<ul>
-					<li>
+					<li class="desktop_nav_link">
 						<a href="#about">
 							<span class="first_letter">A</span>bout
 						</a>
+						<div></div>
 					</li>
-					<li>
+					<li class="desktop_nav_link">
 						<a href="#portfolio">
 							<span class="first_letter">P</span>ortfolio
 						</a>
+						<div></div>
 					</li>					
-					<li>
+					<li class="desktop_nav_link">
 						<a href="#contact">
 							<span class="first_letter">C</span>ontact
 						</a>
+						<div></div>
 					</li>
 				</ul>
 			</nav>
@@ -71,19 +74,30 @@
 		</nav>
 
 		<main>
-			<section class="hero">
+			<section id="hero" class="hero">
 				<div class="hero_text">
 					<div>
 						<div class="hi">Hi, I am</div>
 						<div class="name">Nil Garcés</div>
 					</div>
 					<span class="i_am">A full stack developer from Barcelona.</span>
-					<span class="cv">CV</span>
+					<button class="cv">
+						View CV
+						<svg xmlns="http://www.w3.org/2000/svg" class="download_icon" height="24" viewBox="0 -960 960 960" width="24"><path fill="#ffffff" d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+					</button>
 				</div>
-				<div>
-					<div class="hero_img_container">
-						<img src="img/me_edit.jpg" class="hero_img">
+				<div class="hero_img">
+					<div>
+						<div class="hero_img_container">
+							<img src="img/me_edit.jpg" class="me_img">
+						</div>
+						<div class="me_img_shadow"></div>
 					</div>
+				</div>
+			</section>
+
+			<section id="skills" class="">
+				<div class="">
 				</div>
 			</section>
 
@@ -92,11 +106,16 @@
 
 				<div class="">
 					<p>
-						I fell in love with programming during my Mathematics degree, more than eight years ago, where I as lucky enough to meet other hacky friends. That was the moment where I realized the power of HTML, CSS & JS, which I recurrently put into practice on several hackathons or side projects.
+						I fell in love with programming during my Mathematics degree, where I was lucky enough to meet other hacky friends. That was the moment in which I discovered the power of the triforce: HTML, CSS & JS. During those days, I recurrently had the chance to use them in several hackathons and side projects, cementing a good base for later learning.
 					</p>
 					<p>
-						After finishing my studies in advanced mathematics and a brief detour into the domains of data science, I decided to return to and delve deeper into web development. Ever since, my main focus as a software consultant and full stack developer has been building cool stuff and enjoying the crazy ride in this ever-evolving field.
+						After finishing my studies in advanced mathematics and a brief detour into the domains of data science, I decided to return to and delve deeper into web development. Ever since, my main focus as a software consultant and full stack developer has been enjoying the crazy ride in this ever-evolving field.
 					</p>
+					</br>
+					<p>
+						My tools and areas of interest revolve around Typescript, React, Next.js, Node, both SQL (MySQL, PostgreSQL) and no SQL databases (MongoDB), and recently Golang. I am also acquainted to Python and its related data science libraries.
+					</p>
+					</br>
 					<p>
 						When I'm not at the computer, I'm usually playing the guitar, reading, hanging out with friends or learning useless information on Youtube/Wikipedia.
 					</p>
@@ -110,19 +129,19 @@
 					<div class="temp_img">
 						<img src="img/proj1.jpeg">
 						<div class="project-title">
-							Google Image 1
+							Project 1
 						</div>
 					</div>
 					<div class="temp_img">
 						<img src="img/proj2.jpeg">
 						<div class="project-title">
-							Google Image 2
+							Project 2
 						</div>
 					</div>
 					<div class="temp_img">
 						<img src="img/proj3.jpg">
 						<div class="project-title">
-							Google Image 3
+							Project 3
 						</div>
 					</div>			
 				</div>
@@ -161,6 +180,10 @@
 			</section>
 
 		</main>
+
+		<button id="to_top_button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 -960 960 960"><path fill="#000000" fill-opacity="1" d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+		</button>
 
 		<footer>
 			<span>© Nil Garcés 2023</span>
