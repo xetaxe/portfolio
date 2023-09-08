@@ -21,6 +21,12 @@ html {
 	/* scroll-snap-type: y mandatory; */
 }
 
+@media (min-width: 768px) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -78,12 +84,17 @@ section > h1 {
 /* HEADER */
 
 header {
-	scroll-snap-align: start;
-	background-color: transparent;
+	z-index: 30;
+	background-color: white;
 	color: black;
 	padding: 20px 30px;
 	display: flex;
 	align-items: center;
+}
+
+.fix_header {
+	position: fixed;
+	width: 100vw;
 }
 
 .logo {
@@ -148,19 +159,20 @@ header {
 }
 
 .mobile_nav {
-	z-index: 10;
+	z-index: 20;
 	background-color: white;
 	position: sticky;
 	/* display: fixed; */
-	top: 0;
-	right: 0;
+	top: 40px;
+	left: 0;
 	width: 100vw;
 	height: 100vh;
 	text-align: center;
+	transition: 0.3s ease-in-out;
 }
 
 .mobile_nav > ul {
-	padding: 20px 0;
+	padding: 40px 20px;
 	list-style: none;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -170,10 +182,14 @@ header {
 	text-align: center;
 }
 
-.mobile_nav_link {
-	margin: 0 10px;
-	padding: 30px;
+.mobile_nav_link{
 	border-bottom: 1px solid rgba(157, 164, 216, 0.3);
+}
+
+.mobile_nav_link > a {
+	display: inline-block;
+	width: 100%;
+	padding: 30px 0;
 }
 
 .menu_button {
@@ -205,20 +221,45 @@ header {
 	top: 4px;
 	right: 0;
 }
+.animation_line_1 {
+	animation: animation_line_1 0.4s linear forwards;
+}
+@keyframes animation_line_1 {
+	40% { transform: rotate(0); }
+	to { transform: rotate(45deg) translateY(10px) translateX(4px);}
+}
+
 #line_2 {
 	top: 14px;
 	right: -4px;
 }
+.animation_line_2 {
+	animation: animation_line_2 0.6s linear forwards;
+}
+@keyframes animation_line_2 {
+	15% { transform: translateX(-4px); }
+	40% { transform: translateX(40px); }
+	to { transform: translateX(40px); }
+}
+
 #line_3 {
 	top: 24px;
 	right: 0;
 }
-
+.animation_line_3 {
+	animation: animation_line_3 0.4s linear forwards;
+}
+@keyframes animation_line_3 {
+	40% { transform: rotate(0); }
+	to { transform: rotate(-45deg) translateY(-10px) translateX(4px);}
+}
 
 /* HERO SECTION */
 
 .hero {
-	min-height: calc(100vh - 50px);
+	min-height: calc(100vh - 66px);
+	max-width: 1600px;
+	margin: 0 auto;
 	font-family: var(--extra-font);
 	display: flex;
 	flex-direction: column;
@@ -227,14 +268,14 @@ header {
 	position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 	.hero {
 		flex-direction: row;
 	}
 }
 
 .hero > div {
-	flex: 1 1 auto;
+	flex: 1 1 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -242,25 +283,26 @@ header {
 }
 
 .hi {
+	padding-top: 10px;
 	z-index: 10;
-	font-size: 3rem;
+	font-size: clamp(3rem, 5vw, 4rem);
 	font-weight: 200;
 }
 
 .name {
-	font-size: 4rem;
+	font-size: clamp(4rem, 6vw, 5rem);
 	font-weight: 400;
 }
 
 .i_am {
-	margin-top: 1rem;
-	font-size: 1.5rem;
+	margin: 2rem 0;
+	font-size: clamp(1.5rem, 3vw, 2rem);
 	font-weight: 400;
 	text-align: start;
 }
 
 .cv {
-	margin: 2rem 0;
+	margin: 1rem 0 4rem;
 	font-family: var(--main-font);
 	font-size: 1rem;
 	font-weight: 300;
@@ -272,6 +314,13 @@ header {
 	border-radius: 100vh;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in 0.5s forwards;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }
 
 .download_icon {
@@ -290,6 +339,10 @@ header {
 	transform: translateX(15px);
 }
 
+.hero_img {
+	padding: 20px 0;
+}
+
 .hero_img > div {
 	position: relative;
 }
@@ -301,6 +354,8 @@ header {
 	border: 4px solid var(--primary-color);
 	position: relative;
 	overflow: hidden;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
 }
 
 .me_img {
@@ -313,12 +368,30 @@ header {
 	position: absolute;
 	top: 12px;
 	left: 12px;
+	background-color: rgba(157, 164, 216, 0.2);
 	border-radius: 20px;
-	border: 4px solid #9da4d8;
+	border: 3px solid #9da4d8;
 	opacity: 0.4;
 	width: calc(80vw + 8px);
 	aspect-ratio: 4 / 3;
 	max-width: calc(450px + 8px);
+	transition: all 0.4s ease-in-out;
+}
+
+
+.hero_img_container:hover {
+	transform: translateX(-6px) translateY(-6px);
+}
+
+.hero_img_container:hover + .me_img_shadow {
+	/* top: 16px;
+	left: 16px; */
+	transform: translateX(-12px) translateY(-12px);
+}
+.hero_img_container:hover + .me_img_shadow + .me_img_shadow{
+	/* top: 16px;
+	left: 16px; */
+	transform: translateX(-6px) translateY(-6px);
 }
 
 .floating_circle {
@@ -327,7 +400,7 @@ header {
 	background-color: transparent;
 	border: 8px solid var(--extra-color);
 	border-radius: 100vh;
-	transition: transform 0.3s;
+	/* transition: ; */
 	animation: rotate360 2s linear infinite;
 }
 

@@ -12,5 +12,8 @@
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.16"
   }
 }
