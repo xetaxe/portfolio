@@ -33,8 +33,8 @@
 						<div></div>
 					</li>
 					<li class="desktop_nav_link">
-						<a href="#portfolio">
-							<span class="first_letter">P</span>ortfolio
+						<a href="#projects">
+							<span class="first_letter">P</span>rojects
 						</a>
 						<div></div>
 					</li>					
@@ -61,8 +61,8 @@
 					</a>
 				</li>
 				<li class="mobile_nav_link">
-					<a href="#portfolio">
-						<span class="first_letter">P</span>ortfolio
+					<a href="#projects">
+						<span class="first_letter">P</span>projects
 					</a>
 				</li>
 				<li class="mobile_nav_link">
@@ -89,7 +89,8 @@
 				<div class="hero_img">
 					<div>
 						<div class="hero_img_container">
-							<img src="img/me_edit.jpg" class="me_img">
+							<img src="img/me_hero.jpg" class="me_img">
+							<div class="loading_spinner"></div>
 						</div>
 						<div class="me_img_shadow"></div>
 						<div class="me_img_shadow"></div>
@@ -98,34 +99,92 @@
 				</div>
 			</section>
 
-			<section id="skills" class="">
-				<div class="">
+			<section id="about" class="about">
+				<h1>About me</h1>
+				<svg width="61" height="59" class="stairs_svg" viewBox="0 0 61 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M1 14V0H0V14V15H1H15V29H16H30V44H31H45V59H46H61V58H46V44V43H31V29V28H16V14H15H1Z" fill="#EBE4A6"/>
+				</svg>
+
+				<div class="about_container">
+					<div class="about_img">
+						<svg viewBox="0 0 321 548" class="blob_svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M17.2005 224.039C21.032 156.322 1.89898 76.2972 41.7085 30.5761C81.0827 -14.6451 144.085 0.64811 195.177 19.6336C233.305 33.8019 254.525 78.9534 278.766 118.666C298.458 150.926 321.23 183.366 319.948 224.039C318.701 263.62 286.447 285.941 272.38 321.362C243.131 395.013 255.994 508.109 195.177 538.215C133.509 568.742 56.6363 515.187 18.1339 447.22C-17.5195 384.282 12.8356 301.181 17.2005 224.039Z" stroke="#EBE4A6"/>
+						</svg>
+						<div>
+							<div class="about_img_container">
+								<img src="img/me_about.jpg" class="me_img">
+							</div>
+						</div>
+					</div>
+					<div>
+						<p>
+							I fell in love with programming during my Mathematics degree, where I was lucky enough to meet other hacky friends. During those days, I recurrently had the chance to use the triforce (HTML, CSS & JS) in several hackathons and side projects, cementing a good base for later learning.
+						</p>
+						<p>
+							After finishing my studies in advanced mathematics and a brief detour into the domains of data science, I decided to return to and delve deeper into web development. Ever since, my main focus has been enjoying the crazy ride in this ever-evolving field.
+						</p>
+						</br>
+						<svg width="55" height="7" viewBox="0 0 55 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="3.5" cy="3.5" r="3" stroke="#EBE4A6"/>
+							<circle cx="15.5" cy="3.5" r="3" stroke="#EBE4A6"/>
+							<circle cx="27.5" cy="3.5" r="3" stroke="#EBE4A6"/>
+							<circle cx="39.5" cy="3.5" r="3" stroke="#EBE4A6"/>
+							<circle cx="51.5" cy="3.5" r="3" stroke="#EBE4A6"/>
+						</svg>
+					</br>
+						<p>
+							I am always excited about building cool websites and web applications. About turning designs into reality, or creating them from scratch using my UI/UX knowledge if necessary. About adding new features, optimizing the backend or solving these nasty bugs that hinder performance.
+						</p>
+						<!-- </br> -->
+						<p>
+							My goal? Crafting robust but visually appealing and user-friendly applications that provide a seamless browsing experience.
+						</p>
+					</div>
 				</div>
 			</section>
-
-			<section id="about" class="">
-				<h1>About</h1>
-
-				<div class="">
-					<p>
-						I fell in love with programming during my Mathematics degree, where I was lucky enough to meet other hacky friends. That was the moment in which I discovered the power of the triforce: HTML, CSS & JS. During those days, I recurrently had the chance to use them in several hackathons and side projects, cementing a good base for later learning.
-					</p>
-					<p>
-						After finishing my studies in advanced mathematics and a brief detour into the domains of data science, I decided to return to and delve deeper into web development. Ever since, my main focus as a software consultant and full stack developer has been enjoying the crazy ride in this ever-evolving field.
-					</p>
-					</br>
-					<p>
-						My tools and areas of interest revolve around Typescript, React, Next.js, Node, both SQL (MySQL, PostgreSQL) and no SQL databases (MongoDB), and recently Golang. I am also acquainted to Python and its related data science libraries.
-					</p>
-					</br>
-					<p>
-						When I'm not at the computer, I'm usually playing the guitar, reading, hanging out with friends or learning useless information on Youtube/Wikipedia.
-					</p>
+			<div class="custom_shape_divider">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+				</svg>
+			</div>
+			<section id="tools" class="tools">
+				<div class="tools_container">
+					<div class="tools_text">
+						<p>
+							My tools and areas of interest revolve around Typescript, React, Next.js, Node, both SQL and no-SQL databases, and recently Golang. I am also acquainted to Python and its related data science libraries.
+						</p>
+					</div>
+					<div class="tools_img">
+						<div class="logos_container">
+							<img src="logos/typescript.svg" alt="Typescript logo"/>
+							<img src="logos/react.svg" alt="React logo"/>
+							<img src="logos/nextjs.svg" alt="NextJS logo"/>
+							<img src="logos/nodejs.svg" alt="NodeJS logo"/>
+							<img src="logos/tailwind.svg" alt="Tailwind logo"/>
+							<img src="logos/postgresql.svg" alt="PostgreSQL logo"/>
+							<img src="logos/figma.svg" alt="Figma logo"/>
+							<img src="logos/golang.svg" alt="Golang logo"/>
+							<img src="logos/docker.svg" alt="Docker logo"/>
+							<img src="logos/python.svg" alt="Python logo"/>
+							<img src="logos/typescript.svg" alt="Typescript logo"/>
+							<img src="logos/react.svg" alt="React logo"/>
+							<img src="logos/nextjs.svg" alt="NextJS logo"/>
+							<img src="logos/nodejs.svg" alt="NodeJS logo"/>
+							<img src="logos/tailwind.svg" alt="Tailwind logo"/>
+							<img src="logos/postgresql.svg" alt="PostgreSQL logo"/>
+							<img src="logos/figma.svg" alt="Figma logo"/>
+							<img src="logos/golang.svg" alt="Golang logo"/>
+							<img src="logos/docker.svg" alt="Docker logo"/>
+							<img src="logos/python.svg" alt="Python logo"/>
+							<!-- <img src="logos/mongodb.svg" alt="MongoDB logo"/> -->
+							<!-- <img src="logos/mysql.svg" alt="MySQL logo"/> -->
+						</div>
+					</div>
 				</div>
 			</section>
-
-			<section id="portfolio" class="">
-				<h1>Portfolio</h1>
+			<div class="triangle"></div>
+			<section id="projects" class="projects">
+				<h1>Projects</h1>
 
 				<div class="">
 					<div class="temp_img">
@@ -148,36 +207,43 @@
 					</div>			
 				</div>
 			</section>
+			<div class="skew_border"></div>
+			<section id="extra" class="">
+				<div class="">
+					<p>
+						When I'm not at the computer, I'm usually reading, hanging out with friends or learning useless information on Youtube/Wikipedia.
+					</p>
+					<p>
+						But I also play the guitar and create music!🥰
+					</p>
+					<p>
+						In case you want to take a look:
+					</p>
+				</div>
+			</section>
 
-			<section id="contact" class="">
+			<section id="contact" class="contact">
 				<h1>Contact</h1>
 
-				<div class="container">
-					<form onsubmit="false">
-						
-						<div class="col6 section-title">
-							<label for="contact-name">Name</label>
-							<input type="text" id="contact-name" placeholder="Your name...">
-						</div>
-
-						<div class="col6 section-title">
-							<label for="contact-email">Contact email</label>
-							<input type="text" id="contact-email">
+				<div class="contact_container">
+					<div class="contact_text">
+						Got a question or proposal, or just want to say hello?</br> Go ahead! :)
 					</div>
-
-						<div class="col12 section-title">
-							<label for="contact-subject">Subject</label>
-							<input type="text" id="contact-subject"></textarea>
+					<form action="https://postmail.invotes.com/send"
+						method="post" id="email_form" class="email_form">
+						<div class="email_info">
+							<input type="text" name="subject" placeholder="Subject" />
+							<input type="text" name="reply_to" placeholder="Your Email" />
 						</div>
-
-						<div class="col12 section-title">
-							<label for="contact-message">Subject</label>
-							<textarea id="contact-message" placeholder="Write something.."></textarea>
-						</div>
-
-					<input type="submit" value="Submit">
-				
+						<textarea name="text" placeholder="Message"></textarea>
+						<input type="hidden" name="access_token" value="4pacz4dp7bosul7tix5x42au" /> 
+						<input type="hidden" name="success_url" value="" />
+						<input type="hidden" name="error_url" value="" />			
+						
+						<input id="submit_form" type="submit" id="email_submit" class="email_submit" value="Send" />
+						
 					</form>
+					<div class="email_provider">Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></div>
 				</div>
 			</section>
 

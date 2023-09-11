@@ -61,9 +61,9 @@ addEventListener("load", () => {
         floatingCircle.setAttribute("speed", floatingCircleHeight
          / 10);
         let divSpeed = Math.floor(Math.random()*(8 - 3) + 3);
-        floatingCircle.style.animationDuration = divSpeed + "s";
-        if(i%3 === 0)
-            floatingCircle.style.animationDirection = "reverse"; 
+        // floatingCircle.style.animationDuration = divSpeed + "s";
+        // if(i%3 === 0)
+        //     floatingCircle.style.animationDirection = "reverse"; 
         document.getElementById("hero").appendChild(floatingCircle);
     }
     for(let i=0; i<10; i++){
