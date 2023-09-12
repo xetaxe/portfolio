@@ -88,9 +88,14 @@
 				</div>
 				<div class="hero_img">
 					<div>
-						<div class="hero_img_container">
+						<div id="hero_img_container" class="hero_img_container">
 							<img src="img/me_hero.jpg" class="me_img">
 							<div class="loading_spinner"></div>
+							<div id="loaded_bg" class="loaded_bg">
+								<div>
+									<img src="img/cat.gif" id="cat_gif" class="cat_gif">
+								</div>
+							</div>
 						</div>
 						<div class="me_img_shadow"></div>
 						<div class="me_img_shadow"></div>
@@ -186,25 +191,109 @@
 			<section id="projects" class="projects">
 				<h1>Projects</h1>
 
-				<div class="">
-					<div class="temp_img">
-						<img src="img/proj1.jpeg">
-						<div class="project-title">
-							Project 1
-						</div>
+				<div class="projects_container">
+					<div class="projects_text">Here are some side projects and ideas I have worked on over the years:</div>
+
+					<div class="projects_grid">
+						<a href="#">
+							<div class="project_template">
+								<div class="project_img">
+									<div>
+										<img src="img/proj1.jpeg">
+									</div>
+								</div>
+								<div class="project_text">
+									<div class="project_title">Linkary</div>
+									<div class="project_description">
+										Web application to save useful links/web resources to consult later.
+									</div>
+									<div class="project_tags">
+										<span class="tag">React</span>
+										<span class="tag">NextJS</span>
+										<span class="tag">Tailwind</span>
+										<span class="tag">MySQL (Planetscale)</span>
+										<span class="tag">Drizzle</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="project_template">
+								<div class="project_img">
+									<div>
+										<img src="img/proj2.jpeg">
+									</div>
+								</div>
+								<div class="project_text">
+									<div class="project_title">Memojy</div>
+									<div class="project_description">
+										Full stack application to play the Memory game with emoji cards. It is possible to play several players on the same PC or online (multiplayer).
+									</div>
+									<div class="project_tags">
+										<span class="tag">React</span>
+										<span class="tag">Sass</span>
+										<span class="tag">Golang</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="project_template">
+								<div class="project_img">
+									<div>
+										<img src="img/proj3.jpg">
+									</div>
+								</div>
+								<div class="project_text">
+									<div class="project_title">Web Visuals & Creative</div>
+									<div class="project_description">
+										Some side mini-projects I have coded or participated in over time, more centered on the creative/visual side of web programming: cool visualizations, mini-games, WebGL...
+									</div>
+									<div class="project_tags">
+										<span class="tag">HTML, CSS & JS</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="project_template">
+								<div class="project_img">
+									<div>
+										<img src="img/proj1.jpeg">
+									</div>
+								</div>
+								<div class="project_text">
+									<div class="project_title">Wherio</div>
+									<div class="project_description">
+										Multiplayer game platform, where the games revolve around the concept of anticipating what the other players will do!
+									</div>
+									<div class="project_tags">
+										<span class="tag">HTML, CSS & JS</span>
+										<span class="tag">NodeJS</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="#">
+							<div class="project_template">
+								<div class="project_img">
+									<div>
+										<img src="img/proj2.jpeg">
+									</div>
+								</div>
+								<div class="project_text">
+									<div class="project_title">Facebook clone</div>
+									<div class="project_description">
+										Facebook clone, it serves to illustrate how to use React and Tailwind together.
+									</div>
+									<div class="project_tags">
+										<span class="tag">React</span>
+										<span class="tag">Tailwind</span>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
-					<div class="temp_img">
-						<img src="img/proj2.jpeg">
-						<div class="project-title">
-							Project 2
-						</div>
-					</div>
-					<div class="temp_img">
-						<img src="img/proj3.jpg">
-						<div class="project-title">
-							Project 3
-						</div>
-					</div>			
 				</div>
 			</section>
 			<div class="skew_border"></div>

@@ -32,7 +32,7 @@ body {
 	padding: 0;
 	flex: 1 1 100%;
 	max-width: 1746px;
-	text-align: justify;
+	/* text-align: justify; */
 	background-color: var(--bg-main-color);
 	font-family: var(--main-font);
 	overflow: scroll;
@@ -280,6 +280,7 @@ header {
 	align-items: stretch;
 	color: var(--primary-color);
 	position: relative;
+	overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -311,8 +312,9 @@ header {
 .i_am {
 	margin: 2rem 0;
 	font-size: clamp(1.5rem, 3vw, 2rem);
+	height: clamp(3rem, 6vw, 4rem);
 	font-weight: 400;
-	text-align: start;
+	text-align: center;
 }
 
 .cv {
@@ -412,8 +414,8 @@ header {
 	z-index: 20;
 	box-sizing: content-box;
 	position: absolute;
-	left: 81.5%; 
 	top: 49%;
+	left: 81.5%;
 	background-color: transparent;
 	border: 3px solid var(--extra-color);
 	width: 12px;
@@ -421,6 +423,32 @@ header {
 	border-top-color: transparent;
 	border-radius: 100vh;
 	animation: rotate360 3s linear infinite normal, fadeIn 3s cubic-bezier(.61,.02,.6,.16) normal forwards;
+}
+
+.loaded_bg {
+	z-index: 20;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	clip-path: polygon(75.1% 41.9%, 97.6% 40.8%, 92.7% 65.9%, 71% 59.8%);
+}
+
+.loaded_bg > div {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.cat_gif {
+	position: absolute;
+	width: 18%;
+	top: 45%;
+	left: 75%;
+	opacity: 0;
+	transform: skewX(-12deg) skewY(3deg);
 }
 
 .floating_circle {
@@ -442,7 +470,7 @@ header {
 }
 
 @keyframes rotate360 {
-	to {transform: rotate(360deg);} 
+	to {transform: rotate(360deg);}
 }
 
 
@@ -538,7 +566,7 @@ header {
 	position: relative;
 }
 
-.about_img_container > img{
+.about_img_container > img {
 	max-width: 375px;
 }
 
@@ -547,7 +575,6 @@ header {
 	height: 24px;
 	background-color: var(--extra-color);
     overflow: hidden;
-    /* transform: rotate(180deg); */
 }
 
 .custom_shape_divider svg {
@@ -594,6 +621,10 @@ header {
 	align-items: center;
 }
 
+.tools_text {
+	padding: 0 1rem;
+}
+
 .tools_img {
 	max-width: 100%;
 	padding: 0 5px;
@@ -609,14 +640,14 @@ header {
 }
 
 @keyframes slideLeft {
-	to {transform: translateX(-100%) translateX(760px);} 
+	to {transform: translateX(-100%) translateX(760px);}
 }
 
 .triangle {
 	position: relative;
 	background: var(--extra-color);
 }
-  
+
 .triangle::before {
 	content: '';
 	position: absolute;
@@ -633,12 +664,117 @@ header {
 
 /* PROJECTS SECTION */
 
+.projects_container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	flex: 1 1 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.projects_text {
+	width: 100%;
+	padding: 2rem 0;
+}
+.projects_grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 550px), 1fr));
+	gap: 1rem;
+}
+
+.project_template {
+	padding: 6px;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: stretch;
+	background-color: rgba(157, 164, 216, 0.03);
+	/* background-color: var(--accent-color); */
+	/* background-color:rgba(235, 228, 166, 0.06); */
+	border-radius: 6px;
+	box-shadow: 0px 0px 10px -4px rgba(26,37,64,0.3);
+}
+
+@media (min-width: 550px) {
+	.project_template {
+		flex-direction: row;
+	}
+}
+
+.project_img {
+	flex: 0 1 33%;
+	display: flex;
+	/* align-items: center; */
+}
+
+.project_img > div {
+	border-radius: 4px;
+	overflow: hidden;
+	height: min-content;
+}
+
+.project_img img {
+	width: 100%;
+	vertical-align: top;
+	/* max-width: 200px; */
+}
+
+.project_text {
+	flex: 1 1 66%;
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 1.2rem;
+}
+
+.project_title {
+	padding-top: 1rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	/* font-family: var(--extra-font); */
+	/* letter-spacing: 1.5px; */
+}
+
+@media (min-width: 550px) {
+	.project_title {
+		padding-top: 0.3rem;
+		font-size: 1rem;
+	}
+}
+
+.project_description {
+	flex-grow: 1;
+}
+
+.project_tags {
+	align-self: self-start;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.tag {
+	padding: 0.25rem 0.5rem;
+	color: var(--primary-color);
+	color: white;
+	background-color: var(--accent-color);
+	font-weight: 500;
+	font-size: 0.8rem;
+	border: 1px solid var(--primary-color);
+	border-radius: 6px;
+}
 
 .skew_border {
 	position: relative;
 	background: white;
 }
-  
+
 .skew_border::before {
 	content: '';
 	position: absolute;
@@ -791,8 +927,4 @@ footer {
 
 #to_top_button svg {
 	display: block;
-}
-
-.temp_img > img {
-	max-width: 300px;
 }

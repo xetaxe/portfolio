@@ -144,6 +144,21 @@ const typed = new Typed('#role', {
 });
 
 
+// Click on hero image logic (appear cat in PC screen)
+document.getElementById("hero_img_container").addEventListener("click", function() {
+    document.getElementById("loaded_bg").style.backgroundColor = getRandomColor();
+    document.getElementById("cat_gif").style.opacity = "1";
+})
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 
 // Manage opacity of button that goes to top of page
 addEventListener("scroll", toTopButtonOpacity);
