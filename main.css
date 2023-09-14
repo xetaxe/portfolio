@@ -18,12 +18,12 @@ html {
 	justify-content: center;
 	margin: 0 auto;
 	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
-@media (min-width: 768px) {
-	html {
-		scroll-behavior: smooth;
-	}
+::-webkit-scrollbar {
+	display: none;
 }
 
 body {
@@ -31,22 +31,12 @@ body {
 	padding: 0;
 	flex: 1 1 100%;
 	max-width: 1746px;
-	/* text-align: justify; */
 	background-color: var(--bg-main-color);
 	font-family: var(--main-font);
 	overflow: scroll;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-}
-
-::-webkit-scrollbar {
-	display: none;
-}
-
-html {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
 }
 
 a {
@@ -59,9 +49,7 @@ p {
 }
 
 section {
-	align-self: stretch;
 	padding: 30px;
-	/* min-height: 100vh; */
 }
 
 @media (min-width: 768px) {
@@ -78,16 +66,6 @@ section > h1 {
 	font-weight: 400;
 	letter-spacing: 2px;
 }
-/* section > h1 {
-	margin: 1rem 0;
-	text-align: center;
-	font-family: var(--main-font);
-	text-transform: uppercase;
-	color: var(--extra-color);
-	font-size: 4rem;
-	font-weight: 700;
-	letter-spacing: 4px;
-} */
 
 .hide {
 	display: none;
@@ -97,7 +75,6 @@ section > h1 {
 /* HEADER */
 
 header {
-	z-index: 30;
 	background-color: white;
 	color: black;
 	padding: 20px 30px;
@@ -106,6 +83,7 @@ header {
 }
 
 .fix_header {
+	z-index: 30;
 	position: fixed;
 	width: 100vw;
 }
@@ -113,7 +91,6 @@ header {
 .logo {
 	font-size: 1.5rem;
 	margin-right: auto;
-	font-family: var(--main-font);
 	font-weight: 600;
 	letter-spacing: -1.5px;
 }
@@ -143,7 +120,6 @@ header {
 
 .desktop_nav > ul {
 	margin: 0;
-	position: relative;
 	list-style: none;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -175,7 +151,6 @@ header {
 	z-index: 20;
 	background-color: white;
 	position: sticky;
-	/* display: fixed; */
 	top: 40px;
 	left: 0;
 	width: 100vw;
@@ -267,6 +242,7 @@ header {
 	to { transform: rotate(-45deg) translateY(-10px) translateX(4px);}
 }
 
+
 /* HERO SECTION */
 
 .hero {
@@ -296,27 +272,25 @@ header {
 	align-items: center;
 }
 
-.hi {
+.hero_hi {
 	padding-top: 10px;
 	z-index: 10;
 	font-size: clamp(3rem, 5vw, 4rem);
 	font-weight: 200;
 }
 
-.name {
+.hero_name {
 	font-size: clamp(4rem, 6vw, 5rem);
-	font-weight: 400;
 }
 
-.i_am {
+.hero_i_am {
 	margin: 2rem 0;
 	font-size: clamp(1.5rem, 3vw, 2rem);
 	height: clamp(3rem, 6vw, 4rem);
-	font-weight: 400;
 	text-align: center;
 }
 
-.cv {
+.hero_cv {
 	margin: 1rem 0 4rem;
 	font-family: var(--main-font);
 	font-size: 1rem;
@@ -328,8 +302,6 @@ header {
 	color: white;
 	border: 2px solid var(--primary-color);
 	border-radius: 100vh;
-	cursor: pointer;
-	transition: 0.2s ease-in-out;
 	opacity: 0;
 	animation: fadeIn 0.5s ease-in 0.5s forwards;
 }
@@ -339,7 +311,7 @@ header {
 	100% {opacity: 1;}
 }
 
-.download_icon {
+.hero_download_icon {
 	position: absolute;
 	opacity: 1;
 	vertical-align: bottom;
@@ -347,7 +319,7 @@ header {
 }
 
 @media (min-width: 1024px) {
-	.download_icon {
+	.hero_download_icon {
 		position: absolute;
 		opacity: 0;
 		-webkit-transition: all .25s cubic-bezier(.14, .59, 1, 1.01);
@@ -356,10 +328,10 @@ header {
 		top: 5px;
 		right: auto;
 	}
-	.cv:hover {
+	.hero_cv:hover {
 		transform: scale(1.02);
 	}
-	.cv:hover .download_icon{
+	.hero_cv:hover .hero_download_icon{
 		opacity: 1;
 		transform: translateX(15px);
 	}
@@ -466,6 +438,8 @@ header {
 	transform: skewX(-12deg) skewY(3deg);
 }
 
+
+/* Particles classes */
 .floating_circle {
 	box-sizing: content-box;
 	position: absolute;
@@ -585,6 +559,7 @@ header {
 	max-width: 375px;
 }
 
+
 .custom_shape_divider {
     position: relative;
 	height: 24px;
@@ -604,10 +579,9 @@ header {
 }
 
 
-/* SKILLS SECTION */
+/* TOOLS SECTION */
 
 .tools {
-	padding: 30px;
 	background-color: var(--extra-color);
 	color: var(--primary-color);
 }
@@ -632,18 +606,17 @@ header {
 .tools_container > div {
 	flex: 1 1 100%;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 }
 
 .tools_text {
+	justify-content: center;
 	padding: 0 1rem;
 }
 
 .tools_img {
 	max-width: 100%;
 	padding: 0 5px;
-	justify-content: flex-start !important;
 	overflow-x: hidden;
 }
 
@@ -657,6 +630,7 @@ header {
 @keyframes slideLeft {
 	to {transform: translateX(-100%) translateX(760px);}
 }
+
 
 .triangle {
 	position: relative;
@@ -688,15 +662,13 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 }
 
 .projects_text {
-	width: 100%;
 	padding: 2rem 0;
 }
-.projects_flexbox {
-	width: 100%;
+.projects_list {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -712,8 +684,10 @@ header {
 	transition: all 0.2s ease-in-out;
 }
 
-.project_template:hover > .project_img {
-	transform: scale(1.01);
+@media (min-width: 550px) {
+	.project_template {
+		flex-direction: row;
+	}
 }
 
 .project_template:after {
@@ -725,12 +699,6 @@ header {
 	height: 0;
 	max-width: 900px;
 	border: 1px solid var(--primary-color);
-}
-
-@media (min-width: 550px) {
-	.project_template {
-		flex-direction: row;
-	}
 }
 
 .project_img {
@@ -746,6 +714,9 @@ header {
 	}
 }
 
+.project_template:hover > .project_img {
+	transform: scale(1.01);
+}
 
 .project_img > div {
 	border-radius: 4px;
@@ -802,12 +773,10 @@ header {
 	transition: opacity 0.4s ease-in;
 }
 
-
 .project_title_underline {
 	position: absolute;
 	transform: translateX(-100%);
 	width: calc(100% - 32px);
-	/* height: 2px; */
 	bottom: 3px;
 	border: 1px solid var(--primary-color);
 	opacity: 0.6;
@@ -864,7 +833,6 @@ header {
 /* EXTRA SECTION */
 
 .extra {
-	/* min-height: 340px; */
 	background-color: var(--extra-color);
 	color: var(--primary-color);
 	display: flex;
@@ -910,7 +878,6 @@ header {
 	background-color: black;
 	color: white;
 	font-weight: 700;
-	/* text-transform: uppercase; */
 	letter-spacing: 1px;
 	line-height: 24px;
 	border-radius: 6px;
@@ -920,7 +887,6 @@ header {
 }
 
 .external_link {
-	/* display: none; */
 	position: absolute;
 	top: 4px;
 	right: 0;
@@ -954,7 +920,6 @@ header {
 }
 
 .contact_text {
-	/* padding: 2rem; */
 	margin: 4rem 0;
 	font-size: 1.5rem;
 	text-align: left;
@@ -1049,7 +1014,7 @@ textarea:focus, input:focus{
 
 
 
-/* FOOTER + EXTRA */
+/* FOOTER + OTHERS */
 
 
 footer {

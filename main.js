@@ -137,7 +137,7 @@ function animateParticles(){
 
 
 // Typing animation in hero text
-const typed = new Typed('#role', {
+const typed = new Typed('#hero_i_am', {
     strings: ["full stack developer", "software consultant"],
     typeSpeed: 60,
     startDelay: 1200,
