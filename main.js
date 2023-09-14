@@ -1,5 +1,9 @@
 import Typed from "typed.js";
 
+const TOTAL_CIRCLE_PARTICLES = 15;
+const TOTAL_PLUS_PARTICLES = 10;
+const TOTAL_LINE_PARTICLES = 5;
+
 // Show mobile menu
 let showingMobileMenu = false;
 
@@ -38,7 +42,7 @@ mobileMenuItems.forEach(function(link) {
 addEventListener("load", () => {
     let parentWidth = document.getElementById("hero").getBoundingClientRect().width;
     let parentHeight = document.getElementById("hero").getBoundingClientRect().height;
-    for(let i=0; i<15; i++){
+    for(let i=0; i<TOTAL_CIRCLE_PARTICLES; i++){
         let floatingCircle = document.createElement('div');
         floatingCircle.id = 'floating_circle'+i;
         floatingCircle.className = 'floating_circle';
@@ -61,12 +65,12 @@ addEventListener("load", () => {
         floatingCircle.setAttribute("speed", floatingCircleHeight
          / 10);
         let divSpeed = Math.floor(Math.random()*(8 - 3) + 3);
-        // floatingCircle.style.animationDuration = divSpeed + "s";
-        // if(i%3 === 0)
-        //     floatingCircle.style.animationDirection = "reverse"; 
+        floatingCircle.style.animationDuration = divSpeed + "s";
+        if(i%3 === 0)
+            floatingCircle.style.animationDirection = "reverse"; 
         document.getElementById("hero").appendChild(floatingCircle);
     }
-    for(let i=0; i<10; i++){
+    for(let i=0; i<TOTAL_PLUS_PARTICLES; i++){
         let floatingPlus = document.createElement('div');
         floatingPlus.id = 'floating_plus'+i;
         floatingPlus.className = 'floating_text';
@@ -87,7 +91,7 @@ addEventListener("load", () => {
         document.getElementById("hero").appendChild(floatingPlus);
     }
 
-    for(let i=0; i<5; i++){
+    for(let i=0; i<TOTAL_LINE_PARTICLES; i++){
         let floatingLine = document.createElement('div');
         floatingLine.id = 'floating_plus'+i;
         floatingLine.className = 'floating_text';
