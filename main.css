@@ -734,8 +734,8 @@ header {
 	padding: 1rem 0.5rem 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
-	align-items: start;
+	justify-content: flex-start;
+	align-items: flex-start;
 	gap: 1rem;
 }
 
